@@ -7,6 +7,8 @@ For improvements and suggestions, please contact [Piyush](mailto:piyuranjan@gate
 * biocluster/microbio-1: /gpfs/pace1/project/bio-stewart-repository/SequencedDatasets
 * biocluster/microbio-1 Optional access: ~/bio-stewart-repository/SequencedDatasets on pace.gatech.edu
 
+---
+
 ### Directory contents
 * [README.md](./README.md): Description of the repository with rules.
 * [datasetSheet.txt](./datasetSheet.txt): a flat `\t` (tab) delimited table with information on the datasets available in the parent directory.
@@ -14,6 +16,8 @@ For improvements and suggestions, please contact [Piyush](mailto:piyuranjan@gate
 * `../*.(gz|tar)`: Dataset files in .gz or .tar in the parent directory.
   * `*.gz`: Paired interleaved or single end read sequences.
   * `*.tar`: Paired read sequences in two files (pair1.fq, pair2.fq) with their md5sum.
+
+---
 
 ### datasetSheet.txt Column description
 General rules:
@@ -80,6 +84,8 @@ Following is the list of column headers with their description, rules and allowe
     * JP: Josh Parris
     * PR: Piyush Ranjan
 26. **MD5Sum**: MD5Sum of the dataset file.
+
+---
 
 ### Uploading datasets
 Instructions:
