@@ -22,6 +22,7 @@ General rules:
 * If some information is not known at the time of recording, please put UA and fill it later with appropriate information.
 
 Following is the list of column headers with their description, rules and allowed values. Columns are in the same order.
+
 1. **FileName**: File name for the dataset provided as **SampleAccession.SequencedVersion** with .gz or .tar extension in the parent directory.
 2. **DatasetID**: A unique identifier provided as **SampleAccession.SequencedVersion**. Use this to label the file along with .gz or .tar extension. For example, `ETNP13S06MG300SV.01` is a viable dataset ID.
 3. **SampleAccession**: A unique identifier given to the sample. This is going to be used in **DatasetID**. Please keep the accessions understandable and intuitive, while keeping it short at the same time. If doing this seems hard, 6 digit accessions are also allowed as long as they are unique. For example, a metagenome sample collected on a sterivex filter from ETNP Station 06 from 300m depth in 2013 can be given an accession as `ETNP13S06MG300SV`. Use only alphanumeric chars.
