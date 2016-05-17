@@ -55,25 +55,26 @@ Following is the list of column headers with their description, rules and allowe
     * SV: Sterivex (0.2um)
 13. **Latitude**: Latitude of collection. Only float point values allowed.
 14. **Longitude**: Longitude of collection. Only float point values allowed.
-15. **CollectMonth**: Month of sample collection in mm format.
-16. **CollectDay**: Day of sample collection in dd format.
-17. **SequencedIn**: Facility where the sample is sequenced.
+15. **CollectLabel**: Label of the collection vial/filter. For example, the sample above comes from a sterivex filter labelled ETNP201306SV43
+16. **CollectMonth**: Month of sample collection in mm format.
+17. **CollectDay**: Day of sample collection in dd format.
+18. **SequencedIn**: Facility where the sample is sequenced.
     * SL: Stewart Lab
     * JGI: DOE Joint Genome Institute
-18. **SequencedOn**: Machine on which the sample was sequenced in machine-cycle format. For example, the sample shown above can be labelled as `HiSeq-270c`.
-19. **DateSequenced**: Date on which sequencing was finished in yyyymmdd format.
-20. **ReadOrientation**: The dataset submitted has this read orientation.
+19. **SequencedOn**: Machine on which the sample was sequenced in machine-cycle format. For example, the sample shown above can be labelled as `HiSeq-270c`.
+20. **DateSequenced**: Date on which sequencing was finished in yyyymmdd format.
+21. **ReadOrientation**: The dataset submitted has this read orientation.
     * S: Single-end sequences (in a single file). Use .gz extension later.
     * P: Paired-end sequences (in two files). Make a tarball (and use .tar) with the individual gzipped paired files and their md5sum.
     * PI: Paired-interleaved sequences (in a single file). Use .gz extension later.
-21. **Throughput**: Number of sequences (number of pairs if paired) in the dataset.
-22. **TrimAdapter**: End to which adapters are already trimmed, if at all.
+22. **Throughput**: Number of sequences (number of pairs if paired) in the dataset.
+23. **TrimAdapter**: End to which adapters are already trimmed, if at all.
     * 5: If 5' adapter is trimmed. This is true if data is demultiplexed by the machine.
     * 3: If 3' adapter is trimmed.
     * 5;3: If both 5' and 3' adapters are trimmed.
-23. **5Adapter**: Sequence of the 5' end adapter used during sequencing.
-24. **3Adapter**: Sequence of the 3' end adapter used during sequencing.
-25. **Contact**: Initials of the people to contact for more information or reporting errors. Multiple people can be reported separated by a semicolon. For example, for the sample shown above, this string can be `SG;CP;PR;NS`.
+24. **5Adapter**: Sequence of the 5' end adapter used during sequencing.
+25. **3Adapter**: Sequence of the 3' end adapter used during sequencing.
+26. **Contact**: Initials of the people to contact for more information or reporting errors. Multiple people can be reported separated by a semicolon. For example, for the sample shown above, this string can be `SG;CP;PR;NS`.
     * TB: Anthony (Tony) Bertagnolli
     * AB: Andrew Burns
     * ZP: Zoe Pratte
@@ -83,7 +84,7 @@ Following is the list of column headers with their description, rules and allowe
     * CP: Cory Padilla
     * JP: Josh Parris
     * PR: Piyush Ranjan
-26. **MD5Sum**: MD5Sum of the dataset file.
+27. **MD5Sum**: MD5Sum of the dataset file.
 
 ---
 
