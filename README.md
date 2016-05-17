@@ -70,10 +70,10 @@ Following is the list of column headers with their description, rules and allowe
 22. **TrimAdapter**: End to which adapters are already trimmed, if at all.
     * 5: If 5' adapter is trimmed. This is true if data is demultiplexed by the machine.
     * 3: If 3' adapter is trimmed.
-    * 5,3: If both 5' and 3' adapters are trimmed.
+    * 5;3: If both 5' and 3' adapters are trimmed.
 23. **5Adapter**: Sequence of the 5' end adapter used during sequencing.
 24. **3Adapter**: Sequence of the 3' end adapter used during sequencing.
-25. **Contact**: Initials of the people to contact for more information or reporting errors. Multiple people can be reported separated by a comma. For example, for the sample shown above, this string can be `SG,CP,PR,NS`.
+25. **Contact**: Initials of the people to contact for more information or reporting errors. Multiple people can be reported separated by a semicolon. For example, for the sample shown above, this string can be `SG;CP;PR;NS`.
     * TB: Anthony (Tony) Bertagnolli
     * AB: Andrew Burns
     * ZP: Zoe Pratte
