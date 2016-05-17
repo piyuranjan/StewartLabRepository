@@ -90,13 +90,13 @@ Following is the list of column headers with their description, rules and allowe
 
 ### Uploading datasets
 Instructions:
-* Add as much information as possible in the **datasetSheet.txt**. Sheet can be prepared in excel seperately and then can be added as plain text to the file.
+* Add as much information as possible in the **datasetSheet.txt**. Sheet can be prepared in Excel seperately and then can be added as plain text to the file. Caution: If editing in Excel, please make sure the line endings while exporting in plain text are unix style `\n` (not Mac `\r` or Windows `\r\n`).
 * If the dataset is single-end or paired-interleaved:
     1. Compress the FastQ file `[yourDatasetID].fq` by gzip as `gzip [yourDatasetID].fq`.
     2. Calculate and append the md5sum to the **md5sum.txt** file with `md5sum [yourDatasetID].fq.gz >>StewartLabRepository/md5sum.txt`
 * If the dataset is paired-end in two files:
     1. Compress both `[yourDatasetID]-R1.fq` and `[yourDatasetID]-R2.fq` by gzip.
-    2. Calculate and store md5sum in a seperate [yourDatasetID]-md5sum.txt file as `md5sum [yourDatasetID]-pair*.fq.gz >>[yourDatasetID]-md5sum.txt`.
+    2. Calculate and store md5sum in a seperate [yourDatasetID]-md5sum.txt file as `md5sum [yourDatasetID]-R*.fq.gz >>[yourDatasetID]-md5sum.txt`.
     3. Make a tarball of all three files as `tar -cvf [yourDatasetID].tar [yourDatasetID]-R*.fq [yourDatasetID]-md5sum.txt`.
     4. Calculate md5sum of this tarball and add it to the last column of the **databaseSheet.txt**. Also add it to **md5sum.txt** in the repository documents as `md5sum [yourDatasetID].tar >>StewartLabRepository/md5sum.txt`.
 * Add `[yourDatasetID].fq.gz` or `[yourDatasetID].tar` in the **FileName** (1st column) of **datasetSheet.txt**.
