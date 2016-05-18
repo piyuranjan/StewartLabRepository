@@ -74,10 +74,10 @@ Following is the list of column headers with their description, rules and allowe
     * 5: If 5' adapter is trimmed. This is true if data is demultiplexed by the machine.
     * 3: If 3' adapter is trimmed.
     * 5;3: If both 5' and 3' adapters are trimmed.
-24. **5Adapter**: Sequence of the 5' end adapter used during sequencing.
-25. **3Adapter**: Sequence of the 3' end adapter used during sequencing.
-26. **i7Index**: 
-27. **i5Index**: 
+24. **R1Adapter3**: Portion of the adapter expected downstream touching 3' end of R1 if the insert DNA was shorter than the machine cycle length. Use this sequence to remove 3' adapters in R1.
+25. **R2Adapter3**: Portion of the adapter expected downstream touching 3' end of R2 if the insert DNA was shorter than the machine cycle length. Use this sequence to remove 3' adapters in R2.
+26. **i7Index**: Illumina i7 index barcode number used during sequencing.
+27. **i5Index**: Illumina i5 index barcode number used during sequencing.
 28. **Contact**: Initials of the people to contact for more information or reporting errors. Multiple people can be reported separated by a semicolon. For example, for the sample shown above, this string can be `SG;CP;PR;NS`.
     * TB: Anthony (Tony) Bertagnolli
     * AB: Andrew Burns
@@ -95,6 +95,7 @@ Following is the list of column headers with their description, rules and allowe
 
 ### Adding notes for a dataset in [datasetNotes.txt](./datasetNotes.txt)
 List of column headers with their description, rules and allowed values. Columns are in the same order.
+
 1. **FileName**: File name for the dataset provided as **SampleAccession.SequencedVersion** with .gz or .tar extension in the parent directory.
 2. **DatasetID**: A unique identifier provided as **SampleAccession.SequencedVersion**.
 3. **Note**: Important details about the dataset in a single line. All characters are allowed except tab (`\t`).
@@ -103,7 +104,7 @@ List of column headers with their description, rules and allowed values. Columns
 
 ### Uploading datasets
 Instructions:
-* Add as much information as possible in the **datasetSheet.txt**. Sheet can be prepared in Excel seperately and then can be added as plain text to the file. Caution: If editing in Excel, please make sure the line endings while exporting in plain text are unix style `\n` (not Mac `\r` or Windows `\r\n`).
+* Add as much information as possible in the **[datasetSheet.txt](datasetSheet.txt)** and **[datasetNotes.txt](./datasetNotes.txt)**. Sheet and notes can be prepared in Excel seperately and then can be added as plain text to the file. Caution: If editing in Excel, please make sure the line endings while exporting in plain text are unix style `\n` (not Mac `\r` or Windows `\r\n`).
 * If the dataset is single-end or paired-interleaved:
     1. Compress the FastQ file `[yourDatasetID].fq` by gzip as `gzip [yourDatasetID].fq`.
     2. Calculate and append the md5sum to the **md5sum.txt** file with `md5sum [yourDatasetID].fq.gz >>StewartLabRepository/md5sum.txt`
