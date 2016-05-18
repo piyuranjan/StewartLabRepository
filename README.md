@@ -11,19 +11,21 @@ For improvements and suggestions, please contact [Piyush](mailto:piyuranjan@gate
 
 ### Directory contents
 * [README.md](./README.md): Description of the repository with rules.
-* [datasetSheet.txt](./datasetSheet.txt): a flat `\t` (tab) delimited table with information on the datasets available in the parent directory.
-* [md5sum.txt](./md5sum.txt): a `md5sum -c` compatible file with md5sums of the datasets.
+* [datasetSheet.txt](./datasetSheet.txt): A flat `\t` (tab) delimited table with information on the datasets available in the parent directory.
+* [datasetNotes.txt](./datasetNotes.txt): A flat `\t` (tab) delimited file with detail notes on the datasets available in the parent directory.
+* [md5sum.txt](./md5sum.txt): A `md5sum -c` compatible file with md5sums of the datasets.
+* .gitignore: Contents of this file are ignored to git version control.
 * `../*.(gz|tar)`: Dataset files in .gz or .tar in the parent directory.
   * `*.gz`: Paired interleaved or single end read sequences.
   * `*.tar`: Paired read sequences in two files (pair1.fq, pair2.fq) with their md5sum.
 
 ---
 
-### datasetSheet.txt Column description
+### [datasetSheet.txt](datasetSheet.txt) Column description and format
 General rules:
 * Please do not leave any column blank.
 * If an information cloumn is inappropriate for a dataset, please put an asterisk (`*`).
-* If some information is not known at the time of recording, please put UA and fill it later with appropriate information.
+* If some information is not known at the time of recording, please put **UA** and fill it later with appropriate information.
 
 Following is the list of column headers with their description, rules and allowed values. Columns are in the same order.
 
@@ -74,7 +76,9 @@ Following is the list of column headers with their description, rules and allowe
     * 5;3: If both 5' and 3' adapters are trimmed.
 24. **5Adapter**: Sequence of the 5' end adapter used during sequencing.
 25. **3Adapter**: Sequence of the 3' end adapter used during sequencing.
-26. **Contact**: Initials of the people to contact for more information or reporting errors. Multiple people can be reported separated by a semicolon. For example, for the sample shown above, this string can be `SG;CP;PR;NS`.
+26. **i7Index**: 
+27. **i5Index**: 
+28. **Contact**: Initials of the people to contact for more information or reporting errors. Multiple people can be reported separated by a semicolon. For example, for the sample shown above, this string can be `SG;CP;PR;NS`.
     * TB: Anthony (Tony) Bertagnolli
     * AB: Andrew Burns
     * ZP: Zoe Pratte
@@ -84,7 +88,16 @@ Following is the list of column headers with their description, rules and allowe
     * CP: Cory Padilla
     * JP: Josh Parris
     * PR: Piyush Ranjan
-27. **MD5Sum**: MD5Sum of the dataset file.
+29. **MD5Sum**: MD5Sum of the dataset file.
+30. **Note**: A succinct text note adding any important information. Max 30 alphanumerals, no spaces/special chars allowed. If detail information is desired, please refer to [datasetNotes.txt](./datasetNotes.txt) instead and put **N** here.
+
+---
+
+### Adding notes for a dataset in [datasetNotes.txt](./datasetNotes.txt)
+List of column headers with their description, rules and allowed values. Columns are in the same order.
+1. **FileName**: File name for the dataset provided as **SampleAccession.SequencedVersion** with .gz or .tar extension in the parent directory.
+2. **DatasetID**: A unique identifier provided as **SampleAccession.SequencedVersion**.
+3. **Note**: Important details about the dataset in a single line. All characters are allowed except tab (`\t`).
 
 ---
 
