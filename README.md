@@ -89,7 +89,7 @@ Following is the list of column headers with their description, rules and allowe
     * JP: Josh Parris
     * PR: Piyush Ranjan
 29. **MD5Sum**: MD5Sum of the dataset file.
-30. **Note**: A succinct text note adding any important information. Max 30 alphanumerals, no spaces/special chars allowed. If detail information is desired, please refer to [datasetNotes.txt](./datasetNotes.txt) instead and put **N** here.
+30. **Note**: A succinct text note adding any important information. Max 30 alphanumerals, no spaces/special chars allowed, except semicolon (;) to separate multiple notes. If detail information is desired, please refer to [datasetNotes.txt](./datasetNotes.txt) instead and put **N** here.
 
 ---
 
@@ -98,7 +98,7 @@ List of column headers with their description, rules and allowed values. Columns
 
 1. **FileName**: File name for the dataset provided as **SampleAccession.SequencedVersion** with .gz or .tar extension in the parent directory.
 2. **DatasetID**: A unique identifier provided as **SampleAccession.SequencedVersion**.
-3. **Note**: Important details about the dataset in a single line. All characters are allowed except tab (`\t`).
+3. **Note**: Important details about the dataset in a single line. All characters are allowed except tab (`\n`).
 
 ---
 
