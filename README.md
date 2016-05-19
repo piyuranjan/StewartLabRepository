@@ -57,7 +57,7 @@ Following is the list of column headers with their description, rules and allowe
     * SV: Sterivex (0.2um)
 13. **Latitude**: Latitude of collection. Only float point values allowed.
 14. **Longitude**: Longitude of collection. Only float point values allowed.
-15. **CollectLabel**: Label of the collection vial/filter. For example, the sample above comes from a sterivex filter labelled ETNP201306SV43
+15. **CollectLabel**: Label of the collection vial/filter. Please go back to sampling log for the cruise to find more information. For example, the sample above comes from a sterivex filter labelled ETNP13DNA43.
 16. **CollectMonth**: Month of sample collection in mm format.
 17. **CollectDay**: Day of sample collection in dd format.
 18. **SequencedIn**: Facility where the sample is sequenced.
